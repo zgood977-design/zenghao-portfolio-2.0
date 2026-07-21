@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>曾好 · 工作项目作品集</title>
+<style>
+:root{--i:#172126;--p:#f8f6f1;--a:#c55c3e;--g:#a27a47;--m:#687177;--l:#dfdbd2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--p);color:var(--i);font:15px 'PingFang SC',Arial}
+a{color:inherit;text-decoration:none}
+.w{max-width:1160px;margin:auto;padding:0 30px}
+nav{height:70px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--l);font-size:13px}
+nav b{letter-spacing:.12em}
+nav span{color:var(--m);word-spacing:18px}
+.hero{padding:85px 0 68px;display:grid;grid-template-columns:1.25fr .75fr;gap:45px;align-items:end}
+.ey{font-size:11px;letter-spacing:.16em;color:var(--g);font-weight:bold}
+h1,h2,h3{font-family:Georgia,'Songti SC',serif;margin:0}
+h1{font-size:clamp(58px,8vw,105px);line-height:.94;letter-spacing:-.06em;margin:16px 0 25px}
+h1 span{display:block;font-size:.52em;font-style:italic;color:var(--a);margin-top:10px}
+.intro{font-size:18px;line-height:1.85;color:#41494e;max-width:580px}
+.focus{margin-top:34px;padding:9px 0 9px 19px;border-left:1px solid var(--g);line-height:1.7}
+.focus span{font-size:13px;color:var(--m)}
+.side{background:#20282c;color:#fff;padding:32px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
+.side p{font-size:13px;color:#c8cdcf;line-height:1.75}
+.side b{font:58px Georgia;color:#e4bc7c}
+.side small{display:block;color:#c8cdcf;line-height:1.6}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--l);border-bottom:1px solid var(--l);margin-bottom:98px}
+.stat{padding:23px 18px;border-right:1px solid var(--l)}
+.stat:last-child{border:0}
+.stat b{display:block;font:34px Georgia}
+.stat span{display:block;margin-top:5px;color:var(--m);font-size:12px;line-height:1.5}
+section{padding-bottom:100px}
+.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}
+.head h2{font-size:40px;letter-spacing:-.05em;margin-top:8px}
+.head p{max-width:330px;color:var(--m);font-size:13px;line-height:1.75}
+.feature{display:grid;grid-template-columns:1.07fr .93fr;background:#e7dfd2;min-height:455px}
+.feature img{width:100%;height:100%;object-fit:cover}
+.fc{padding:54px;align-self:center}
+.fc h3{font-size:39px;line-height:1.13;margin:12px 0}
+.fc p{line-height:1.85;color:#50575b}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:#fff;border:1px solid #ebe8e2;display:grid;grid-template-columns:46% 54%;min-height:275px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 32px #24201b18}
+.pic{overflow:hidden;background:#343f44}
+.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.body{padding:29px 25px;display:flex;flex-direction:column}
+.body small{font-size:10px;letter-spacing:.11em;font-weight:bold;color:var(--g)}
+.body h3{font-size:23px;margin:12px 0}
+.body p{font-size:13px;line-height:1.75;color:var(--m);margin:0}
+.body em{font-style:normal;font-size:12px;margin-top:auto;padding-top:16px}
+/* 新增的海外社媒数据区块样式 */
+.data-highlight {
+    background: #ffffff;
+    border: 1px solid var(--l);
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.data-text h3 {
+    font-size: 32px;
+    margin: 15px 0 20px;
+    line-height: 1.2;
+}
+.data-text p {
+    color: #50575b;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+.data-metrics {
+    display: flex;
+    gap: 40px;
+}
+.data-metrics div {
+    border-left: 2px solid var(--a);
+    padding-left: 15px;
+}
+.data-metrics b {
+    display: block;
+    font-size: 28px;
+    font-family: Georgia, serif;
+    color: var(--i);
+}
+.data-metrics span {
+    font-size: 12px;
+    color: var(--m);
+    margin-top: 5px;
+    display: block;
+}
+.data-img-container {
+    background: #f4f2ed;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.data-img-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.dark{background:#20282c;color:#fff;padding:70px 0}
+.dark .head p,.job p{color:#c3c9cc}
+.timeline{border-top:1px solid #4b5559}
+.job{display:grid;grid-template-columns:145px 1fr 110px;gap:25px;padding:26px 0;border-bottom:1px solid #4b5559}
+.job time{font-size:12px;color:#e4bc7c}
+.job h3{font:18px 'PingFang SC',Arial;margin-bottom:8px}
+.job p{font-size:13px;line-height:1.75;margin:0}
+.job span{font-size:12px;text-align:right;color:#c3c9cc}
+.contact{padding:100px 0 36px}
+.box{padding:52px;background:var(--a);color:#fff;display:flex;align-items:end;justify-content:space-between}
+.box h2{font-size:45px;line-height:1.08;margin-top:8px}
+.details{text-align:right;line-height:2;font-size:14px}
+.details a{border-bottom:1px solid #ffffff88}
+footer{padding-top:22px;display:flex;justify-content:space-between;color:var(--m);font-size:11px}
+@media(max-width:850px){
+    .data-highlight { grid-template-columns: 1fr; padding: 40px 30px; gap: 30px; }
+}
+@media(max-width:700px){
+.w{padding:0 20px}
+nav span{display:none}
+.hero,.feature,.grid{grid-template-columns:1fr}
+.hero{padding:55px 0 45px}
+.stats{grid-template-columns:1fr 1fr;margin-bottom:65px}
+.head{display:block}
+.head p{margin-top:15px}
+.feature img{height:280px}
+.fc{padding:32px}
+.card{grid-template-columns:40% 60%;min-height:230px}
+.body{padding:21px 18px}
+.body h3{font-size:20px}
+.data-highlight { padding: 30px 20px; }
+.data-metrics { flex-direction: column; gap: 20px; }
+.job{grid-template-columns:1fr;gap:8px}
+.job span{text-align:left}
+.box{display:block;padding:34px 26px}
+.details{text-align:left;margin-top:26px}
+footer{display:block;line-height:2}
+}
+</style>
+</head>
+<body>
+<div class="w">
+    <nav><b>ZENG HAO · PROJECTS</b><span>项目　经历　联系</span></nav>
+    <header class="hero">
+        <div>
+            <div class="ey">CONTENT · VISUAL · OPERATIONS</div>
+            <h1>曾好<span>工作项目作品集</span></h1>
+            <p class="intro">内容运营与视觉策划从业者。这里记录我参与的餐饮、客房、活动与 AI 内容项目，以及从选题、拍摄到发布运营的工作过程。</p>
+            <div class="focus"><b>内容运营 / 品牌传播 / 海外社媒方向</b><br><span>短视频策划 · 视觉内容制作 · 平台运营 · AIGC 内容生产 · 直播执行</span></div>
+        </div>
+        <aside class="side">
+            <p>作品集以实际工作素材为基础，呈现不同场景下的内容策划、视觉制作与运营实践。</p>
+            <div><b>5</b><small>类工作项目<br>持续更新中</small></div>
+        </aside>
+    </header>
+    <div class="stats">
+        <div class="stat"><b>264</b><span>2026 上半年<br>累计发布视频</span></div>
+        <div class="stat"><b>150%</b><span>5 月视频发布量<br>环比增长</span></div>
+        <div class="stat"><b>558万+</b><span>海外短视频<br>单周期浏览量</span></div>
+        <div class="stat"><b>85.7万</b><span>单条内容最高<br>自然播放量</span></div>
+    </div>
+</div>
+
+<section class="w">
+    <div class="head">
+        <div>
+            <div class="ey">FEATURED PROJECT</div>
+            <h2>AI 节日创意项目</h2>
+        </div>
+        <p>以 AIGC 工具参与产品视觉和创意表达，完成端午粽子主题内容的构思与制作。</p>
+    </div>
+    <article class="feature">
+        <img src="assets/zongzi-ai.png" alt="AI 创作的粽子主题视觉">
+        <div class="fc">
+            <div class="ey">AIGC VISUAL PROJECT</div>
+            <h3>端午粽子创意视觉</h3>
+            <p>围绕端午礼盒主题，将中国传统绘画元素、扇面和产品包装进行创意组合。该项目使用 AI 工具辅助完成视觉创作与迭代。</p>
+        </div>
+    </article>
+</section>
+
+<section class="w">
+    <div class="head">
+        <div>
+            <div class="ey">SELECTED PROJECTS</div>
+            <h2>工作项目</h2>
+        </div>
+        <p>按项目场景呈现：婚宴、客房、西餐与中餐内容制作。</p>
+    </div>
+    <div class="grid">
+        <article class="card">
+            <div class="pic"><img src="assets/wedding.jpg" alt="婚宴项目封面"></div>
+            <div class="body">
+                <small>EVENT CONTENT</small>
+                <h3>婚宴活动传播</h3>
+                <p>以场景化内容呈现婚宴布置与服务细节，完成活动项目的记录与传播。</p>
+                <em>策划 · 现场拍摄 · 视频制作</em>
+            </div>
+        </article>
+        <article class="card">
+            <div class="pic"><img src="assets/room.png" alt="客房项目封面"></div>
+            <div class="body">
+                <small>SPACE EXPERIENCE</small>
+                <h3>客房体验短片</h3>
+                <p>从空间、光线与入住氛围出发，记录客房体验和服务细节。</p>
+                <em>脚本构思 · 拍摄 · 剪辑</em>
+            </div>
+        </article>
+        <article class="card">
+            <div class="pic"><img src="assets/western.jpg" alt="西餐项目封面"></div>
+            <div class="body">
+                <small>FOOD & BEVERAGE</small>
+                <h3>西餐内容视觉</h3>
+                <p>以产品为主角，通过食物造型与画面氛围传达餐饮体验。</p>
+                <em>产品拍摄 · 视频制作 · 发布运营</em>
+            </div>
+        </article>
+        <article class="card">
+            <div class="pic"><img src="assets/chinese.jpg" alt="中餐项目封面"></div>
+            <div class="body">
+                <small>RESTAURANT CONTENT</small>
+                <h3>中餐厅内容矩阵</h3>
+                <p>围绕菜品、节日布置与互动体验，完成选题、拍摄和后期制作。</p>
+                <em>内容策划 · 拍摄 · 剪辑</em>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- 新增：海外社媒数据高亮区块 -->
+<div class="w">
+    <div class="data-highlight">
+        <div class="data-text">
+            <div class="ey">OVERSEAS SOCIAL MEDIA</div>
+            <h3>海外短视频运营成果</h3>
+            <p>在负责海外社交媒体账号（如 Instagram Reels 等）运营期间，通过优化视频内容与分发策略，实现了账号流量的显著突破。在截图所示的单周期内，内容获得了大规模曝光与互动。</p>
+            <div class="data-metrics">
+                <div>
+                    <b>5,586,108</b>
+                    <span>周期内总浏览量</span>
+                </div>
+                <div>
+                    <b>+8,459</b>
+                    <span>净粉丝增长数</span>
+                </div>
+            </div>
+        </div>
+        <div class="data-img-container">
+            <!-- 这里引用你提供的图片 -->
+            <img src="assets/IMG_7074.jpg" alt="海外短视频数据截图">
+        </div>
+    </div>
+</div>
+
+<section class="dark">
+    <div class="w">
+        <div class="head">
+            <div>
+                <div class="ey">EXPERIENCE</div>
+                <h2>工作经历与能力</h2>
+            </div>
+            <p>内容生产、平台运营、项目协作与视觉表达，是我持续积累的工作能力。</p>
+        </div>
+        <div class="timeline">
+            <article class="job">
+                <time>2025.05 — 至今</time>
+                <div>
+                    <h3>成都新希望高新皇冠假日酒店 · 新媒体运营主管</h3>
+                    <p>负责小红书、大众点评、视频号等账号的内容运营；参与品牌宣传片、餐饮与活动内容的策划、拍摄和制作；执行官方直播与活动传播工作。</p>
+                </div>
+                <span>内容运营<br>项目执行</span>
+            </article>
+            <article class="job">
+                <time>2024.07 — 2024.09</time>
+                <div>
+                    <h3>成都时光岛文化传播有限公司 · 运营</h3>
+                    <p>负责小红书、抖音、公众号、B站等平台的内容编辑、素材剪辑与账号日常维护，独立完成教学视频拍摄与公众号发布。</p>
+                </div>
+                <span>多平台运营<br>内容制作</span>
+            </article>
+            <article class="job">
+                <time>2024.01 — 2024.09</time>
+                <div>
+                    <h3>小红书内容合作 · 拍摄与视觉优化</h3>
+                    <p>参与核心内容拍摄执行与画面审美把控，协作完成商业内容，并产出单篇 3.2w 点赞的作品。</p>
+                </div>
+                <span>商业内容<br>视觉表达</span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="w contact">
+    <div class="box">
+        <div>
+            <div class="ey" style="color:#fff">CONTACT</div>
+            <h2>曾好<br>期待交流。</h2>
+        </div>
+        <div class="details">
+            <a href="tel:18828883270">188-2888-3270</a><br>
+            <a href="mailto:1798631145@qq.com">1798631145@qq.com</a><br>
+            南京传媒学院 · 影视摄影与制作
+        </div>
+    </div>
+    <footer>
+        <span>© 2026 ZENG HAO · WORK PROJECTS</span>
+        <span>内容运营 · 品牌传播 · 海外社媒</span>
+    </footer>
+</section>
+</body>
+</html>
